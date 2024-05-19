@@ -1,9 +1,10 @@
 <h1>To Do List</h1>
 <input type="text" #pole>
-<button (click)="addText(pole.items)"> жми </button>
+<button (click)="addText(pole.value)"> жми </button>
+
 <div class="res">
   <ul class="items">
-    <li *ngFor="let item of items"> {{item.name}} </li>
+    <li *ngFor="let item of items"> {{item.name}}, {{item.id}} <button (click)="delText({item.id})"> удаление </button> </li>
   </ul>
 </div>
 
